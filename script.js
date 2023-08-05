@@ -21,6 +21,8 @@ let compScore = 0;
 let cScoreCard = document.getElementById("c-score");
 
 $("#guess-btn").on("click", () => {
+  $("#minus").addClass("disabled");
+  $("#plus").addClass("disabled");
   $("#guess-btn").addClass("disabled");
   $("#next-round").removeClass("disabled");
 });
@@ -28,6 +30,7 @@ $("#guess-btn").on("click", () => {
 $("#next-round").on("click", () => {
   $("#next-round").addClass("disabled");
   $("#minus").addClass("disabled");
+  $("#plus").removeClass("disabled");
   $("#guess-btn").removeClass("disabled");
 });
 
